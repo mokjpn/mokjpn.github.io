@@ -11,9 +11,9 @@ CDISC RDFの手始めとして、jena で CDISC Terminology を加工してみ�
 CDISC Terminology から、sdtm-terminology.owl をダウンロード(OWLのzipファイルを解凍すると入っている)
 
 SPARQLクエリを作成
-
-
 test.rq
+
+
 12345678PREFI">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jena, arqでCDISC Terminologyを加工する">
@@ -25,9 +25,9 @@ CDISC RDFの手始めとして、jena で CDISC Terminology を加工してみ�
 CDISC Terminology から、sdtm-terminology.owl をダウンロード(OWLのzipファイルを解凍すると入っている)
 
 SPARQLクエリを作成
-
-
 test.rq
+
+
 12345678PREFI">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jena, arqでCDISC Terminologyを加工する">
@@ -37,9 +37,9 @@ CDISC RDFの手始めとして、jena で CDISC Terminology を加工してみ�
 CDISC Terminology から、sdtm-terminology.owl をダウンロード(OWLのzipファイルを解凍すると入っている)
 
 SPARQLクエリを作成
-
-
 test.rq
+
+
 12345678PREFI">
 
   
@@ -116,19 +116,18 @@ test.rq
       
         <h1 id="Apache_jenaでCDISC_Terminologyを加工してみる">Apache jenaでCDISC Terminologyを加工してみる</h1>
 <h2 id="CDISC_RDFの手始めとして、jena_で_CDISC_Terminology_を加工してみた。">CDISC RDFの手始めとして、<a href="https://jena.apache.org/" target="_blank" rel="external">jena</a> で <a href="http://www.cancer.gov/cancertopics/cancerlibrary/terminologyresources/cdisc" target="_blank" rel="external">CDISC Terminology</a> を加工してみた。</h2>
-<ol>
+<ul>
 <li><p><a href="http://www.cancer.gov/cancertopics/cancerlibrary/terminologyresources/cdisc" target="_blank" rel="external">CDISC Terminology</a> から、sdtm-terminology.owl をダウンロード(OWLのzipファイルを解凍すると入っている)</p>
 </li>
 <li><p>SPARQLクエリを作成</p>
-</li>
-</ol>
 <p>test.rq</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">PREFIX cts: &lt;http:<span class="comment">//rdf.cdisc.org/ct/schema#&gt;</span></div><div class="line"></div><div class="line">SELECT ?submission ?definition</div><div class="line">WHERE </div><div class="line">{</div><div class="line">	?<span class="keyword">id</span> cts:cdiscSubmissionValue ?submission .</div><div class="line">	?<span class="keyword">id</span> cts:cdiscDefinition ?definition .</div><div class="line">}</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">PREFIX cts: &lt;http:<span class="comment">//rdf.cdisc.org/ct/schema#&gt;</span></div><div class="line"> </div><div class="line">SELECT ?submission ?definition</div><div class="line">WHERE </div><div class="line">{</div><div class="line"> 	?<span class="keyword">id</span> cts:cdiscSubmissionValue ?submission .</div><div class="line">	?<span class="keyword">id</span> cts:cdiscDefinition ?definition .</div><div class="line">}</div></pre></td></tr></table></figure>
 
-
-<ol>
+<ul>
 <li>arqでクエリ実行</li>
-</ol>
+</ul>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment">arq</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">data</span> <span class="comment">sdtm</span><span class="literal">-</span><span class="comment">terminology</span><span class="string">.</span><span class="comment">owl</span>  <span class="literal">-</span><span class="literal">-</span><span class="comment">query</span> <span class="comment">test</span><span class="string">.</span><span class="comment">rq</span></div></pre></td></tr></table></figure>
 
 
